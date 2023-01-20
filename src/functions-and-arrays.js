@@ -1,19 +1,82 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
+  
+  let numMax
+  if (num1 > num2) {
+    numMax = num1
+    return numMax 
+    }
+    
+  else if (num1 < num2) {
+    numMax = num2
+    return numMax
+    }
+  
+  else {
+    return num1, num2
+    }
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+    
+function findLongestWord(words) {
+      
+      let longestWord = "";
 
-function findLongestWord() {}
-
+      if (words.length === 0) {
+        longestWord = null;
+      }
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+          longestWord = words[i]
+        }
+      }
+    return longestWord;
+  }
+      
+//console.log(findLongestWord())
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+/*function sumNumbers(numbers) {
+  
+  let sum = "";
+
+      if (numbers.length === 0) {
+        sum = null;
+      }
+      if (numbers === 0) {
+        return numbers;
+      }
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total
+  }
+
+*/
+function sumNumbers(numbers) {
+  if (numbers.length === 0) {
+      return 0;
+  }
+
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+  }
+
+  if (sum === 0) {
+      return 0;
+  } else {
+      return sum;
+  }
+}
+
 
 
 
@@ -26,13 +89,36 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers) {
+  if (numbers.length === 0) {
+      return null;
+  }
+
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+  }
+  return sum / numbers.length;
+}
+
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+
+function averageWordLength(words) {
+  if (words.length === 0) {
+      return null;
+  }
+
+  let sum = 0;
+  for (let i = 0; i < words.length; i++) {
+      sum += words[i].length;
+  }
+  return sum / words.length;
+}
+
 
 // Bonus - Iteration #4.1
 function avg() {}
